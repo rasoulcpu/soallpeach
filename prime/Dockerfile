@@ -11,5 +11,4 @@ WORKDIR /src/myapp
 RUN g++ -o myapp main.cpp
  
 # Run the program output from the previous step
-#ENTRYPOINT ["./myapp", "test_input.txt"]
 ENTRYPOINT ["./myapp"]
