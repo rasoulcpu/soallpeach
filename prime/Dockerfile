@@ -8,7 +8,8 @@ COPY ./src /src/myapp
 WORKDIR /src/myapp
  
 # Use GCC to compile the Test.cpp source file
-RUN g++ -o myapp main.c
+RUN g++ -o myapp main.cpp
  
 # Run the program output from the previous step
-CMD ["./myapp"]
+#ENTRYPOINT ["./myapp", "test_input.txt"]
+ENTRYPOINT ["./myapp"]
